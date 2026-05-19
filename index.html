@@ -185,6 +185,193 @@ const questions = [
     opts:["Açık devre","Kapalı devre","Pil olmamalıdır","Kablo kullanılmamalıdır"], ans:1,
     fb:"Elektrik akımının akabilmesi ve ampulün yanması için devrenin kapalı (tam) olması gerekir." },
 
+  { topic:"elektrik", text:"Aşağıdakilerden hangisi elektriği ileten (iletken) bir madde değildir?",
+    opts:["Bakır tel","Demir çivi","Plastik kalem","Alüminyum folyo"], ans:2,
+    fb:"Plastik, elektriği iletmeyen bir yalıtkan maddedir. Bakır, demir ve alüminyum ise iletkendir." },
+
+  { topic:"elektrik", text:"Elektrik devrelerinde anahtarın görevi nedir?",
+    opts:["Akımı güçlendirmek","Devreyi açıp kapatmak","Pili şarj etmek","Ampulü değiştirmek"], ans:1,
+    fb:"Anahtar, devreyi açıp kapatarak elektrik akımının akmasını kontrol eder." },
+
+  { topic:"elektrik", text:"Ampullerin paralel bağlandığı bir devrede bir ampul söndürülürse diğer ampuller için ne olur?",
+    opts:["Hepsi söner","Daha parlak yanar","Yanmaya devam eder","Devre bozulur"], ans:2,
+    fb:"Paralel devrede her ampul ayrı kolda bulunduğundan, biri söndürülse diğerleri yanmaya devam eder." },
+
+  { topic:"elektrik", text:"Seri bağlı devrede bir ampul söndürülürse diğer ampuller için ne olur?",
+    opts:["Daha parlak yanar","Yanmaya devam eder","Hepsi söner","Değişmez"], ans:2,
+    fb:"Seri devrede akım tek yoldan akar. Bir ampul söndürülünce devre kesilir ve tüm ampuller söner." },
+
+  { topic:"elektrik", text:"Elektrik çarpmalarına karşı alınması gereken en önemli güvenlik önlemi hangisidir?",
+    opts:["Islak elle prize dokunmamak","Çok pilli devre kurmak","Uzun kablo kullanmak","Karanlıkta çalışmak"], ans:0,
+    fb:"Su elektriği iletir. Islak elle prize ya da elektrikli aletlere dokunmak çok tehlikelidir." },
+
+  { topic:"elektrik", text:"Aşağıdakilerden hangisi bir devrenin temel elemanlarından DEĞİLDİR?",
+    opts:["Pil","Ampul","İletken kablo","Termometre"], ans:3,
+    fb:"Bir devrenin temel elemanları enerji kaynağı (pil), tüketici (ampul) ve iletken kablodur. Termometre sıcaklık ölçer." },
+
+  { topic:"elektrik", text:"Bir elektrik devresinde kullanılan pilin görevi nedir?",
+    opts:["Devreyi kesmek","Kimyasal enerjiyi elektrik enerjisine dönüştürmek","Isı üretmek","Işık üretmek"], ans:1,
+    fb:"Pil, içindeki kimyasal tepkimeler sayesinde kimyasal enerjiyi elektrik enerjisine dönüştüren bir enerji kaynağıdır." },
+
+  { topic:"ayna", text:"Düz aynada oluşan görüntünün özellikleri hangi seçenekte doğru verilmiştir?",
+    opts:["Büyük, gerçek","Küçük, sanal","Aynı büyüklükte, sanal","Küçük, gerçek"], ans:2,
+    fb:"Düz aynada görüntü cisimle aynı büyüklükte, dik ve sanaldır (ayna arkasında)." },
+
+  { topic:"ayna", text:"İçbükey (konkav) ayna için aşağıdakilerden hangisi doğrudur?",
+    opts:["Işınları her zaman dağıtır","Işınları odak noktasında toplar","Görüntü her zaman küçüktür","Diş hekimliğinde kullanılmaz"], ans:1,
+    fb:"İçbükey aynalar ışınları odak noktasında toplar; bu özellik nedeniyle diş hekimliği ve arama farlarında kullanılır." },
+
+  { topic:"ayna", text:"Trafik güvenliği için kavşak ve geniş alanları izlemekte kullanılan ayna türü hangisidir?",
+    opts:["Düz ayna","İçbükey ayna","Dışbükey ayna","Renk aynaları"], ans:2,
+    fb:"Dışbükey aynalar geniş görüş açısı sağlar; bu nedenle kavşak aynalarında ve araç dikiz aynalarında kullanılır." },
+
+  { topic:"ayna", text:"Işığın düzgün bir yüzeyden geri dönmesine ne ad verilir?",
+    opts:["Kırılma","Yutulma","Yansıma","Saçılma"], ans:2,
+    fb:"Işığın düzgün bir yüzeyden geri dönmesi olayına yansıma denir." },
+
+  { topic:"ayna", text:"Işığın geliş açısı ile yansıma açısı arasındaki ilişki nasıldır?",
+    opts:["Yansıma açısı daha büyüktür","Geliş açısı daha büyüktür","İkisi birbirine eşittir","Herhangi bir ilişki yoktur"], ans:2,
+    fb:"Yansıma yasasına göre geliş açısı her zaman yansıma açısına eşittir." },
+
+  { topic:"ayna", text:"Düz aynada cisim aynaya yaklaştırılırsa görüntü için ne söylenebilir?",
+    opts:["Görüntü büyür","Görüntü de aynaya yaklaşır","Görüntü uzaklaşır","Görüntü kaybolur"], ans:1,
+    fb:"Düz aynada cisim aynaya ne kadar yakınsa görüntü de o kadar yakındır; cisim yaklaştıkça görüntü de yaklaşır." },
+
+  { topic:"ayna", text:"Aşağıdaki günlük yaşam örneklerinden hangisinde içbükey ayna kullanılmaktadır?",
+    opts:["Araç dikiz aynası","Kavşak güvenlik aynası","Makyaj/büyüteç ayna","Düz duvar aynası"], ans:2,
+    fb:"Makyaj ve tıraş aynaları içbükey ayna olup cismi büyütülmüş, dik ve sanal görüntüsünü verir." }
+];
+
+let answered = {}, submitted = false;
+
+function buildQuestions() {
+  const c = document.getElementById("questionsContainer");
+  c.innerHTML = "";
+  const L = ["A","B","C","D"];
+  questions.forEach((q,qi) => {
+    const tc = q.topic==="elektrik"?"tag-elektrik":"tag-ayna";
+    const tl = q.topic==="elektrik"?"⚡ Elektrik":"🪞 Aynalar";
+    const opts = q.opts.map((o,oi)=>`
+      <div class="option" id="opt_${qi}_${oi}" onclick="selectOpt(${qi},${oi})">
+        <div class="opt-letter">${L[oi]}</div><span>${o}</span>
+      </div>`).join("");
+    c.innerHTML += `<div class="q-card" id="qcard_${qi}">
+      <div class="q-header">
+        <div class="q-num">${qi+1}</div>
+        <div style="flex:1">
+          <span class="q-topic-tag ${tc}">${tl}</span>
+          <div class="q-text">${q.text}</div>
+        </div>
+      </div>
+      <div class="options">${opts}</div>
+      <div class="feedback" id="fb_${qi}"></div>
+    </div>`;
+  });
+}
+
+function selectOpt(qi,oi){
+  if(submitted) return;
+  answered[qi]=oi;
+  questions[qi].opts.forEach((_,i)=>{
+    document.getElementById(`opt_${qi}_${i}`).classList.toggle("selected",i===oi);
+  });
+  document.getElementById(`qcard_${qi}`).classList.add("answered");
+  updateProgress();
+}
+
+function updateProgress(){
+  const n=Object.keys(answered).length;
+  document.getElementById("progressFill").style.width=(n/questions.length*100)+"%";
+  document.getElementById("progressLabel").textContent=`${n} / ${questions.length} Yanıtlandı`;
+  document.getElementById("btnSubmit").disabled=n===0;
+}
+
+function submitTest(){
+  if(submitted) return;
+  submitted=true;
+  document.getElementById("btnSubmit").disabled=true;
+  let correct=0,wrong=0,skip=0;
+  questions.forEach((q,qi)=>{
+    const card=document.getElementById(`qcard_${qi}`);
+    const fb=document.getElementById(`fb_${qi}`);
+    const ua=answered[qi];
+    q.opts.forEach((_,oi)=>document.getElementById(`opt_${qi}_${oi}`).classList.add("disabled"));
+    if(ua===undefined){
+      skip++;
+      document.getElementById(`opt_${qi}_${q.ans}`).classList.add("correct-opt");
+      fb.textContent="✏️ Bu soruyu boş bıraktınız. Doğru cevap: "+["A","B","C","D"][q.ans]+" şıkkıydı.";
+      fb.className="feedback show wrong-fb";
+    } else if(ua===q.ans){
+      correct++;
+      card.classList.remove("answered"); card.classList.add("correct");
+      document.getElementById(`opt_${qi}_${q.ans}`).classList.remove("selected");
+      document.getElementById(`opt_${qi}_${q.ans}`).classList.add("correct-opt");
+      fb.textContent="✅ Doğru! "+q.fb; fb.className="feedback show correct-fb";
+    } else {
+      wrong++;
+      card.classList.remove("answered"); card.classList.add("wrong");
+      document.getElementById(`opt_${qi}_${ua}`).classList.remove("selected");
+      document.getElementById(`opt_${qi}_${ua}`).classList.add("wrong-opt");
+      document.getElementById(`opt_${qi}_${q.ans}`).classList.add("correct-opt");
+      fb.textContent="❌ Yanlış. "+q.fb; fb.className="feedback show wrong-fb";
+    }
+  });
+  const pct=Math.round(correct/questions.length*100);
+  document.getElementById("statCorrect").textContent=correct;
+  document.getElementById("statWrong").textContent=wrong;
+  document.getElementById("statSkip").textContent=skip;
+  document.getElementById("resultScore").textContent=`${correct} / ${questions.length}  (${pct}%)`;
+  let emoji,msg;
+  if(pct>=87){emoji="🏆";msg="Mükemmel! Konuya hâkimiyetin çok iyi!";}
+  else if(pct>=67){emoji="🌟";msg="Harika! Biraz daha çalışırsan mükemmel olacak!";}
+  else if(pct>=47){emoji="📚";msg="İyi başlangıç! Tekrar yaparak geliştirebilirsin.";}
+  else{emoji="💪";msg="Üzülme! Konuları tekrar et ve bir daha dene!";}
+  document.getElementById("resultEmoji").textContent=emoji;
+  document.getElementById("resultMsg").textContent=msg;
+  document.getElementById("resultCard").classList.add("show");
+  document.getElementById("resultCard").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function retryTest(){
+  answered={}; submitted=false;
+  document.getElementById("resultCard").classList.remove("show");
+  document.getElementById("progressFill").style.width="0%";
+  document.getElementById("progressLabel").textContent="0 / 15 Yanıtlandı";
+  document.getElementById("btnSubmit").disabled=true;
+  buildQuestions();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+buildQuestions();
+</script>
+</body>
+</html></div>
+
+<div class="questions" id="questionsContainer"></div>
+
+<div class="submit-wrap">
+  <button class="btn-submit" id="btnSubmit" onclick="submitTest()" disabled>✅ Testi Değerlendir</button>
+</div>
+
+<div class="result-card" id="resultCard">
+  <div class="result-emoji" id="resultEmoji"></div>
+  <div class="result-score" id="resultScore"></div>
+  <div class="result-msg" id="resultMsg"></div>
+  <div class="result-stats">
+    <div class="stat-box correct"><div class="stat-n" id="statCorrect">0</div><div class="stat-l">Doğru</div></div>
+    <div class="stat-box wrong"><div class="stat-n" id="statWrong">0</div><div class="stat-l">Yanlış</div></div>
+    <div class="stat-box skip"><div class="stat-n" id="statSkip">0</div><div class="stat-l">Boş</div></div>
+  </div>
+  <br>
+  <button class="btn-retry" onclick="retryTest()">🔄 Testi Yeniden Başlat</button>
+</div>
+
+<script>
+const questions = [
+  { topic:"elektrik", text:"Bir elektrik devresinde ampulün yanması için devre nasıl olmalıdır?",
+    opts:["Açık devre","Kapalı devre","Pil olmamalıdır","Kablo kullanılmamalıdır"], ans:1,
+    fb:"Elektrik akımının akabilmesi ve ampulün yanması için devrenin kapalı (tam) olması gerekir." },
+
   { topic:"ayna", text:"Işığın düzgün bir yüzeyden geri dönmesine ne ad verilir?",
     opts:["Kırılma","Yutulma","Yansıma","Saçılma"], ans:2,
     fb:"Işığın düzgün bir yüzeyden geri dönmesi olayına yansıma denir." },
