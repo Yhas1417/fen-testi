@@ -185,6 +185,242 @@ const questions = [
     opts:["Açık devre","Kapalı devre","Pil olmamalıdır","Kablo kullanılmamalıdır"], ans:1,
     fb:"Elektrik akımının akabilmesi ve ampulün yanması için devrenin kapalı (tam) olması gerekir." },
 
+  { topic:"ayna", text:"Işığın düzgün bir yüzeyden geri dönmesine ne ad verilir?",
+    opts:["Kırılma","Yutulma","Yansıma","Saçılma"], ans:2,
+    fb:"Işığın düzgün bir yüzeyden geri dönmesi olayına yansıma denir." },
+
+  { topic:"elektrik", text:"Aşağıdakilerden hangisi elektriği ileten (iletken) bir madde değildir?",
+    opts:["Bakır tel","Demir çivi","Plastik kalem","Alüminyum folyo"], ans:2,
+    fb:"Plastik, elektriği iletmeyen bir yalıtkan maddedir. Bakır, demir ve alüminyum ise iletkendir." },
+
+  { topic:"ayna", text:"Işığın yansıması ile ilgili aşağıdakilerden hangisi doğrudur?",
+    opts:["Işık yalnızca aynalardan yansır","Pürüzlü yüzeyler ışığı hiç yansıtmaz","Her yüzey ışığı bir ölçüde yansıtır","Yansıma yalnızca karanlıkta gerçekleşir"], ans:2,
+    fb:"Tüm yüzeyler ışığı az ya da çok yansıtır. Düzgün yüzeyler düzenli, pürüzlü yüzeyler ise dağınık yansıma yapar." },
+
+  { topic:"elektrik", text:"Elektrik devrelerinde anahtarın görevi nedir?",
+    opts:["Akımı güçlendirmek","Devreyi açıp kapatmak","Pili şarj etmek","Ampulü değiştirmek"], ans:1,
+    fb:"Anahtar, devreyi açıp kapatarak elektrik akımının akmasını kontrol eder." },
+
+  { topic:"ayna", text:"Işığın geliş açısı ile yansıma açısı arasındaki ilişki nasıldır?",
+    opts:["Yansıma açısı daha büyüktür","Geliş açısı daha büyüktür","İkisi birbirine eşittir","Herhangi bir ilişki yoktur"], ans:2,
+    fb:"Yansıma yasasına göre geliş açısı her zaman yansıma açısına eşittir." },
+
+  { topic:"elektrik", text:"Elektrik enerjisi kullanılırken hangi davranış enerji tasarrufuna katkı sağlar?",
+    opts:["Kullanılmayan odaların ışığını açık bırakmak","Kullanılmayan cihazların fişini çekmek","Televizyonu bekleme modunda bırakmak","Şarj aleti fişi takılı kalsa da önemli değildir"], ans:1,
+    fb:"Kullanılmayan elektrikli cihazların fişini çekmek, gereksiz enerji tüketimini önler ve tasarrufa katkı sağlar." },
+
+  { topic:"ayna", text:"Çukur ayna için aşağıdakilerden hangisi doğrudur?",
+    opts:["Işınları her zaman dağıtır","Işınları odak noktasında toplar","Görüntü her zaman küçüktür","Diş hekimliğinde kullanılmaz"], ans:1,
+    fb:"Çukur aynalar ışınları odak noktasında toplar; bu özellik nedeniyle diş hekimliği ve arama farlarında kullanılır." },
+
+  { topic:"elektrik", text:"Seri bağlı devrede bir ampul söndürülürse diğer ampuller için ne olur?",
+    opts:["Daha parlak yanar","Yanmaya devam eder","Hepsi söner","Değişmez"], ans:2,
+    fb:"Seri devrede akım tek yoldan akar. Bir ampul söndürülünce devre kesilir ve tüm ampuller söner." },
+
+  { topic:"ayna", text:"Trafik güvenliği için kavşak ve geniş alanları izlemekte kullanılan ayna türü hangisidir?",
+    opts:["Düz ayna","Çukur ayna","Tümsek ayna","Renk aynaları"], ans:2,
+    fb:"Tümsek aynalar geniş görüş açısı sağlar; bu nedenle kavşak aynalarında ve araç dikiz aynalarında kullanılır." },
+
+  { topic:"elektrik", text:"Elektrik çarpmalarına karşı alınması gereken en önemli güvenlik önlemi hangisidir?",
+    opts:["Islak elle prize dokunmamak","Çok pilli devre kurmak","Uzun kablo kullanmak","Karanlıkta çalışmak"], ans:0,
+    fb:"Su elektriği iletir. Islak elle prize ya da elektrikli aletlere dokunmak çok tehlikelidir." },
+
+  { topic:"ayna", text:"Düz aynada cisim aynaya yaklaştırılırsa görüntü için ne söylenebilir?",
+    opts:["Görüntü büyür","Görüntü de aynaya yaklaşır","Görüntü uzaklaşır","Görüntü kaybolur"], ans:1,
+    fb:"Düz aynada cisim aynaya ne kadar yakınsa görüntü de o kadar yakındır; cisim yaklaştıkça görüntü de yaklaşır." },
+
+  { topic:"elektrik", text:"Aşağıdakilerden hangisi bir devrenin temel elemanlarından DEĞİLDİR?",
+    opts:["Pil","Ampul","İletken kablo","Termometre"], ans:3,
+    fb:"Bir devrenin temel elemanları enerji kaynağı (pil), tüketici (ampul) ve iletken kablodur. Termometre sıcaklık ölçer." },
+
+  { topic:"ayna", text:"Aşağıdaki günlük yaşam örneklerinden hangisinde çukur ayna kullanılmaktadır?",
+    opts:["Araç dikiz aynası","Kavşak güvenlik aynası","Makyaj/büyüteç ayna","Düz duvar aynası"], ans:2,
+    fb:"Makyaj ve tıraş aynaları çukur ayna olup cismi büyütülmüş, dik ve sanal görüntüsünü verir." },
+
+  { topic:"elektrik", text:"Bir elektrik devresinde kullanılan pilin görevi nedir?",
+    opts:["Devreyi kesmek","Kimyasal enerjiyi elektrik enerjisine dönüştürmek","Isı üretmek","Işık üretmek"], ans:1,
+    fb:"Pil, içindeki kimyasal tepkimeler sayesinde kimyasal enerjiyi elektrik enerjisine dönüştüren bir enerji kaynağıdır." }
+];
+
+let answered = {}, submitted = false;
+
+function buildQuestions() {
+  const c = document.getElementById("questionsContainer");
+  c.innerHTML = "";
+  const L = ["A","B","C","D"];
+  questions.forEach((q,qi) => {
+    const tc = q.topic==="elektrik"?"tag-elektrik":"tag-ayna";
+    const tl = q.topic==="elektrik"?"⚡ Elektrik":"🪞 Aynalar";
+    const opts = q.opts.map((o,oi)=>`
+      <div class="option" id="opt_${qi}_${oi}" onclick="selectOpt(${qi},${oi})">
+        <div class="opt-letter">${L[oi]}</div><span>${o}</span>
+      </div>`).join("");
+    c.innerHTML += `<div class="q-card" id="qcard_${qi}">
+      <div class="q-header">
+        <div class="q-num">${qi+1}</div>
+        <div style="flex:1">
+          <span class="q-topic-tag ${tc}">${tl}</span>
+          <div class="q-text">${q.text}</div>
+        </div>
+      </div>
+      <div class="options">${opts}</div>
+      <div class="feedback" id="fb_${qi}"></div>
+    </div>`;
+  });
+}
+
+function selectOpt(qi,oi){
+  if(submitted) return;
+  answered[qi]=oi;
+  questions[qi].opts.forEach((_,i)=>{
+    document.getElementById(`opt_${qi}_${i}`).classList.toggle("selected",i===oi);
+  });
+  document.getElementById(`qcard_${qi}`).classList.add("answered");
+  updateProgress();
+}
+
+function updateProgress(){
+  const n=Object.keys(answered).length;
+  document.getElementById("progressFill").style.width=(n/questions.length*100)+"%";
+  document.getElementById("progressLabel").textContent=`${n} / ${questions.length} Yanıtlandı`;
+  document.getElementById("btnSubmit").disabled=n===0;
+}
+
+function submitTest(){
+  if(submitted) return;
+  submitted=true;
+  document.getElementById("btnSubmit").disabled=true;
+  let correct=0,wrong=0,skip=0;
+  questions.forEach((q,qi)=>{
+    const card=document.getElementById(`qcard_${qi}`);
+    const fb=document.getElementById(`fb_${qi}`);
+    const ua=answered[qi];
+    q.opts.forEach((_,oi)=>document.getElementById(`opt_${qi}_${oi}`).classList.add("disabled"));
+    if(ua===undefined){
+      skip++;
+      document.getElementById(`opt_${qi}_${q.ans}`).classList.add("correct-opt");
+      fb.textContent="✏️ Bu soruyu boş bıraktınız. Doğru cevap: "+["A","B","C","D"][q.ans]+" şıkkıydı.";
+      fb.className="feedback show wrong-fb";
+    } else if(ua===q.ans){
+      correct++;
+      card.classList.remove("answered"); card.classList.add("correct");
+      document.getElementById(`opt_${qi}_${q.ans}`).classList.remove("selected");
+      document.getElementById(`opt_${qi}_${q.ans}`).classList.add("correct-opt");
+      fb.textContent="✅ Doğru! "+q.fb; fb.className="feedback show correct-fb";
+    } else {
+      wrong++;
+      card.classList.remove("answered"); card.classList.add("wrong");
+      document.getElementById(`opt_${qi}_${ua}`).classList.remove("selected");
+      document.getElementById(`opt_${qi}_${ua}`).classList.add("wrong-opt");
+      document.getElementById(`opt_${qi}_${q.ans}`).classList.add("correct-opt");
+      fb.textContent="❌ Yanlış. "+q.fb; fb.className="feedback show wrong-fb";
+    }
+  });
+  const pct=Math.round(correct/questions.length*100);
+  document.getElementById("statCorrect").textContent=correct;
+  document.getElementById("statWrong").textContent=wrong;
+  document.getElementById("statSkip").textContent=skip;
+  document.getElementById("resultScore").textContent=`${correct} / ${questions.length}  (${pct}%)`;
+  let emoji,msg;
+  if(pct>=87){emoji="🏆";msg="Mükemmel! Konuya hâkimiyetin çok iyi!";}
+  else if(pct>=67){emoji="🌟";msg="Harika! Biraz daha çalışırsan mükemmel olacak!";}
+  else if(pct>=47){emoji="📚";msg="İyi başlangıç! Tekrar yaparak geliştirebilirsin.";}
+  else{emoji="💪";msg="Üzülme! Konuları tekrar et ve bir daha dene!";}
+  document.getElementById("resultEmoji").textContent=emoji;
+  document.getElementById("resultMsg").textContent=msg;
+  document.getElementById("resultCard").classList.add("show");
+  document.getElementById("resultCard").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function retryTest(){
+  answered={}; submitted=false;
+  document.getElementById("resultCard").classList.remove("show");
+  document.getElementById("progressFill").style.width="0%";
+  document.getElementById("progressLabel").textContent="0 / 15 Yanıtlandı";
+  document.getElementById("btnSubmit").disabled=true;
+  buildQuestions();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+buildQuestions();
+</script>
+</body>
+</html>    text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,.1);
+  }
+  .result-card.show { display: block; }
+  .result-emoji { font-size: 60px; margin-bottom: 10px; display: inline-block; animation: bounce 1s ease infinite alternate; }
+  @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-10px); } }
+  .result-score {
+    font-family: 'Baloo 2', sans-serif; font-size: 3rem; font-weight: 800;
+    background: linear-gradient(135deg,#1a73e8,#7c3aed);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .result-msg { font-size: 1.05rem; font-weight: 700; color: var(--muted); margin-top: 6px; }
+  .result-stats { display: flex; justify-content: center; gap: 20px; margin-top: 22px; flex-wrap: wrap; }
+  .stat-box { background: var(--bg); border-radius: 13px; padding: 13px 22px; min-width: 100px; }
+  .stat-box .stat-n { font-family: 'Baloo 2', sans-serif; font-size: 1.9rem; font-weight: 800; }
+  .stat-box .stat-l { font-size: .75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+  .stat-box.correct .stat-n { color: var(--green); }
+  .stat-box.wrong   .stat-n { color: var(--red); }
+  .stat-box.skip    .stat-n { color: #d97706; }
+  .btn-retry {
+    margin-top: 22px; background: var(--bg); border: 2px solid var(--border); border-radius: 11px;
+    padding: 11px 30px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: .92rem;
+    color: var(--text); cursor: pointer; transition: border-color .15s;
+  }
+  .btn-retry:hover { border-color: var(--blue); }
+
+  @media(max-width:600px) {
+    .header { flex-direction: column; text-align: center; padding: 22px 18px; }
+    .q-card { padding: 16px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-icon">⚡🪞</div>
+  <div class="header-text">
+    <h1>6. Sınıf Fen Bilimleri Testi</h1>
+    <p>Elektrik ve Işık / Aynalar Konuları</p>
+    <div class="badges">
+      <span class="badge">📚 Maarif Modeli</span>
+      <span class="badge">15 Soru</span>
+      <span class="badge">Çoktan Seçmeli</span>
+    </div>
+  </div>
+</div>
+
+<div class="progress-bar-wrap">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-label" id="progressLabel">0 / 15 Yanıtlandı</div>
+</div>
+
+<div class="questions" id="questionsContainer"></div>
+
+<div class="submit-wrap">
+  <button class="btn-submit" id="btnSubmit" onclick="submitTest()" disabled>✅ Testi Değerlendir</button>
+</div>
+
+<div class="result-card" id="resultCard">
+  <div class="result-emoji" id="resultEmoji"></div>
+  <div class="result-score" id="resultScore"></div>
+  <div class="result-msg" id="resultMsg"></div>
+  <div class="result-stats">
+    <div class="stat-box correct"><div class="stat-n" id="statCorrect">0</div><div class="stat-l">Doğru</div></div>
+    <div class="stat-box wrong"><div class="stat-n" id="statWrong">0</div><div class="stat-l">Yanlış</div></div>
+    <div class="stat-box skip"><div class="stat-n" id="statSkip">0</div><div class="stat-l">Boş</div></div>
+  </div>
+  <br>
+  <button class="btn-retry" onclick="retryTest()">🔄 Testi Yeniden Başlat</button>
+</div>
+
+<script>
+const questions = [
+  { topic:"elektrik", text:"Bir elektrik devresinde ampulün yanması için devre nasıl olmalıdır?",
+    opts:["Açık devre","Kapalı devre","Pil olmamalıdır","Kablo kullanılmamalıdır"], ans:1,
+    fb:"Elektrik akımının akabilmesi ve ampulün yanması için devrenin kapalı (tam) olması gerekir." },
+
   { topic:"elektrik", text:"Aşağıdakilerden hangisi elektriği ileten (iletken) bir madde değildir?",
     opts:["Bakır tel","Demir çivi","Plastik kalem","Alüminyum folyo"], ans:2,
     fb:"Plastik, elektriği iletmeyen bir yalıtkan maddedir. Bakır, demir ve alüminyum ise iletkendir." },
